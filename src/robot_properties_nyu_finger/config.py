@@ -71,6 +71,7 @@ class NYUFingerConfig(NYUFingerAbstract):
 
     paths = find_paths(robot_name)
     meshes_path = paths["package"]
+    dgm_yaml_dir = paths["dgm_yaml_dir"]
     dgm_yaml_path = paths["dgm_yaml"]
     urdf_path = paths["urdf"]
 

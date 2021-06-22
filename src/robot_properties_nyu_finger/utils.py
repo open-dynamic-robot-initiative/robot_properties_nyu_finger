@@ -28,10 +28,13 @@ def find_paths(robot_name, robot_family="nyu_finger"):
         package_dir = p.parent.absolute()
 
     resources_dir = path.join(package_dir, "robot_properties_" + robot_family)
-    dgm_yaml_path = path.join(
+    dgm_yaml_dir = path.join(
         resources_dir,
-        "dynamic_graph_manager",
-        "dgm_parameters_" + robot_name + ".yaml",
+        "dynamic_graph_manager"
+    )
+    dgm_yaml_path = path.join(
+        dgm_yaml_dir,
+        "dgm_parameters_" + robot_name + ".yaml"
     )
     urdf_path = path.join(resources_dir, robot_name + ".urdf")
     srdf_path = path.join(resources_dir, "srdf", robot_family + ".srdf")
@@ -43,6 +46,7 @@ def find_paths(robot_name, robot_family="nyu_finger"):
     paths = {
         "package": str(package_dir),
         "resources": str(resources_dir),
+        "dgm_yaml_dir": str(dgm_yaml_dir),
         "dgm_yaml": str(dgm_yaml_path),
         "srdf": str(srdf_path),
         "urdf": str(urdf_path),
