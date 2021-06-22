@@ -8,7 +8,7 @@
 #
 
 device:
-  name: "nyu_finger"
+  name: "nyu_finger_double_0"
   sensors:
     # joints data
     joint_positions:
@@ -51,13 +51,14 @@ hardware_communication:
   control_period: 1000000 # in nano second this means 1ms <=> 1kz
   maximum_time_for_user_cmd: 100000
   # Angle between the next index and the home position(joint_positions=12*[0.,])
+  # NOTE: FR_HAA and HR_HAA are rotating in the other direction.
   calibration:
-    # 'HAA', 'HFE', 'KFE',
+    # 'finger0_HAA', 'finger0_HFE', 'finger0_KFE'
     index_to_zero_angle: [
-       0.0, 0.0, 0.0,
+       0.179, 0.497, 0.360,
     ]
-  network_id: "enp5s0f1"
-  ros_node_name: "nyu_finger"
-  shared_memory_name: "shm_nyu_finger"
-  motor_numbers: [0, 3, 2]
+  network_id: "enp26s0f1"
+  shared_memory_name: "shm_nyu_finger_double_0"
+  ros_node_name: "nyu_finger_double_0"
+  motor_numbers: [3., 0., 1.]
   cpu_id: 0
