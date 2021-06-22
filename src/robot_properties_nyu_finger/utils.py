@@ -27,7 +27,7 @@ def find_paths(robot_name, robot_family="nyu_finger"):
     with importlib_resources.path(__package__, "utils.py") as p:
         package_dir = p.parent.absolute()
 
-    resources_dir = path.join(package_dir, "robot_properties_" + robot_family)
+    resources_dir = path.join(package_dir, "resources")
     dgm_yaml_dir = path.join(
         resources_dir,
         "dynamic_graph_manager"

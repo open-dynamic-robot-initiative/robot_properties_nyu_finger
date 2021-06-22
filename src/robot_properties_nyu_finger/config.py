@@ -70,7 +70,7 @@ class NYUFingerConfig(NYUFingerAbstract):
     robot_name = "nyu_finger"
 
     paths = find_paths(robot_name)
-    meshes_path = paths["package"]
+    meshes_path = paths["resources"]
     dgm_yaml_dir = paths["dgm_yaml_dir"]
     dgm_yaml_path = paths["dgm_yaml"]
     urdf_path = paths["urdf"]
@@ -136,7 +136,7 @@ class NYUFingerDoubleConfig(NYUFingerAbstract):
     robot_name = "nyu_finger_double"
 
     paths = find_paths(robot_name)
-    meshes_path = paths["package"]
+    meshes_path = paths["resources"]
     dgm_yaml_path = paths["dgm_yaml"]
     urdf_path = paths["urdf"]
 
