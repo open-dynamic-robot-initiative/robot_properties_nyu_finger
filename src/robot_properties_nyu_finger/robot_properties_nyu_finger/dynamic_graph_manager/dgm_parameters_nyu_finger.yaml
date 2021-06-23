@@ -8,7 +8,6 @@
 # @brief Define the interface between the control and the hardware
 #
 
-is_real_robot: true
 device:
   name: "nyu_finger"
   sensors:
@@ -37,6 +36,16 @@ device:
   controls:
     ctrl_joint_torques:
       size: 3
+    ctrl_joint_positions:
+      size: 3
+    ctrl_joint_velocities:
+      size: 3
+    ctrl_joint_position_gains:
+      size: 3
+    ctrl_joint_velocity_gains:
+      size: 3
+    ctrl_heart_beat:
+      size: 1
 
 hardware_communication:
   max_missed_control: 10
@@ -46,11 +55,10 @@ hardware_communication:
   calibration:
     # 'HAA', 'HFE', 'KFE',
     index_to_zero_angle: [
-       0.179, 0.497, 0.360,
-
+       0.0, 0.0, 0.0,
     ]
   network_id: "enp5s0f1"
-
-motor_I: 0.045     # The inertia of a single blmc_motor
-motor_KT: 0.025    # The Kt constant of the motor [Nm/A]: tau = I * Kt
-motor_gear_ratio: 9 # On the quadruped the gear ration is 1:9
+  ros_node_name: "nyu_finger"
+  shared_memory_name: "shm_nyu_finger"
+  motor_numbers: [0, 3, 2]
+  cpu_id: 0
