@@ -34,40 +34,40 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.17995 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_back.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_back.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.17995 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_back.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_back.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0.0255 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_front.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_front.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0255 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_front.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_front.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0.0255 0.02 0.08"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_side_left.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_side_left.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0255 0.02 0.08"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_side_left.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_side_left.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <!-- Disable this part.  It is not very relevant for collisions but
@@ -81,14 +81,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.0255 0 0.08"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_top.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_top.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0255 0 0.08"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_top.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_top.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
@@ -103,14 +103,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.0195 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/upper_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/upper_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0195 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/upper_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/upper_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
@@ -126,14 +126,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/middle_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/middle_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/middle_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/middle_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
@@ -146,14 +146,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/lower_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/lower_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/lower_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/lower_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <!-- TODO: these are the interial values from the Solo lower leg
@@ -217,53 +217,53 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.17995 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_back.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_back.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.17995 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_back.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_back.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0.0255 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_front.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_front.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0255 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_front.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_front.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0.0255 0.02 0.08"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_side_left.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_side_left.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0255 0.02 0.08"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_side_left.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_side_left.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0.0255 0 0.08"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_top.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_top.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0255 0 0.08"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/base_top.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/base_top.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
@@ -278,14 +278,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.0195 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/upper_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/upper_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0195 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/upper_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/upper_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
@@ -301,14 +301,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/middle_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/middle_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/middle_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/middle_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
@@ -321,14 +321,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/lower_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/lower_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="fingeredu_material"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_properties_nyu_finger/meshes/lower_link.stl" scale="1 1 1"/>
+        <mesh filename="package://meshes/lower_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <!-- TODO: these are the interial values from the Solo lower leg

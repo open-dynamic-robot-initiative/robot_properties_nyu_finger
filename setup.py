@@ -14,7 +14,7 @@ def find_resources(package_name):
     """ Find the relative path of files under the resource folder. """
     resources = []
     package_dir = path.join("src", package_name)
-    resources_dir = path.join(package_dir, package_name)
+    resources_dir = path.join(package_dir, "resources")
 
     for (root, _, files) in walk(resources_dir):
         for afile in files:

@@ -1,9 +1,8 @@
 #
-# @file dgm_parameters_solo12.yaml
-# @author Maximilien Naveau (maximilien.naveau@gmail.com)
+# @author Julian Viereck (jviereck@nyu.edu)
 # @license License BSD-3-Clause
-# @copyright Copyright (c) 2019, New York University and Max Planck Gesellschaft.
-# @date 2019-05-22
+# @copyright Copyright (c) 2021, New York University and Max Planck Gesellschaft.
+# @date 2021-06-22
 #
 # @brief Define the interface between the control and the hardware
 #

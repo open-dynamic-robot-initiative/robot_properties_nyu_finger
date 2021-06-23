@@ -3,7 +3,7 @@
 Store the configuration of the Solo family robots.
 
 License: BSD 3-Clause License
-Copyright (C) 2018-2019, New York University , Max Planck Gesellschaft
+Copyright (C) 2018-2021, New York University , Max Planck Gesellschaft
 Copyright note valid unless otherwise stated in individual files.
 All rights reserved.
 """
@@ -70,7 +70,8 @@ class NYUFingerConfig(NYUFingerAbstract):
     robot_name = "nyu_finger"
 
     paths = find_paths(robot_name)
-    meshes_path = paths["package"]
+    meshes_path = paths["resources"]
+    dgm_yaml_dir = paths["dgm_yaml_dir"]
     dgm_yaml_path = paths["dgm_yaml"]
     urdf_path = paths["urdf"]
 
@@ -135,7 +136,7 @@ class NYUFingerDoubleConfig(NYUFingerAbstract):
     robot_name = "nyu_finger_double"
 
     paths = find_paths(robot_name)
-    meshes_path = paths["package"]
+    meshes_path = paths["resources"]
     dgm_yaml_path = paths["dgm_yaml"]
     urdf_path = paths["urdf"]
 
