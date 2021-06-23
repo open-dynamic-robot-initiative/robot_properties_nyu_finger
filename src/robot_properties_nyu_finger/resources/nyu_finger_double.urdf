@@ -206,7 +206,7 @@
   <joint name="base_to_finger0" type="fixed">
     <parent link="base_link"/>
     <child link="finger0_base_link"/>
-    <origin xyz="-0.1 0 0.283"/>
+    <origin xyz="-0.0506 0 0.37"/>
   </joint>
 
 <!-- Finger 1 -->
@@ -381,7 +381,7 @@
   <joint name="base_to_finger1" type="fixed">
     <parent link="base_link"/>
     <child link="finger1_base_link"/>
-    <origin xyz="0.1 0 0.283" rpy="0 0 3.14"/>
+    <origin xyz="0.0506 0 0.37" rpy="0 0 3.14"/>
   </joint>
 
 </robot>
