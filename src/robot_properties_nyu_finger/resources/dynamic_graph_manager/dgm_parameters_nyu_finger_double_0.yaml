@@ -55,7 +55,7 @@ hardware_communication:
   calibration:
     # 'finger0_HAA', 'finger0_HFE', 'finger0_KFE'
     index_to_zero_angle: [
-       0.179, 0.497, 0.360,
+       0.32318221, 0.2643204, 0.14950995
     ]
   network_id: "enp26s0f1"
   shared_memory_name: "shm_nyu_finger_double_0"
