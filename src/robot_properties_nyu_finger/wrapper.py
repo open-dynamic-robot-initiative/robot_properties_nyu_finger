@@ -11,6 +11,9 @@ All rights reserved.
 import pybullet
 from bullet_utils.wrapper import PinBulletWrapper
 from robot_properties_nyu_finger.config import NYUFingerConfig, NYUFingerDoubleConfig
+from robot_properties_nyu_finger.config import NYUFingerConfig0, NYUFingerConfig1
+
+indexed_finger_configs = [NYUFingerConfig0, NYUFingerConfig1]
 
 dt = 1e-3
 
@@ -20,7 +23,8 @@ class NYUFingerRobot(PinBulletWrapper):
         self,
         pos=None,
         orn=None,
-        useFixedBase=True
+        useFixedBase=True,
+        finger_index=None
     ):
 
         # Load the robot
@@ -29,8 +33,13 @@ class NYUFingerRobot(PinBulletWrapper):
         if orn is None:
             orn = pybullet.getQuaternionFromEuler([0, 0, 0])
 
-        pybullet.setAdditionalSearchPath(NYUFingerConfig.meshes_path)
-        self.urdf_path = NYUFingerConfig.urdf_path
+        if finger_index is not None:
+            Config = indexed_finger_configs[finger_index]
+        else:
+            Config = NYUFingerConfig
+
+        pybullet.setAdditionalSearchPath(Config.meshes_path)
+        self.urdf_path = Config.urdf_path
         self.robotId = pybullet.loadURDF(
             self.urdf_path,
             pos,
@@ -40,7 +49,7 @@ class NYUFingerRobot(PinBulletWrapper):
         )
 
         # Create the robot wrapper in pinocchio.
-        self.pin_robot = NYUFingerConfig.buildRobotWrapper()
+        self.pin_robot = Config.buildRobotWrapper()
 
         # Query all the joints.
         num_joints = pybullet.getNumJoints(self.robotId)
@@ -55,9 +64,9 @@ class NYUFingerRobot(PinBulletWrapper):
                 lateralFriction=0.5,
             )
 
-        self.end_effector_names = NYUFingerConfig.end_effector_names
-        self.end_eff_ids = NYUFingerConfig.end_eff_ids
-        self.joint_names = NYUFingerConfig.joint_names
+        self.end_effector_names = Config.end_effector_names
+        self.end_eff_ids = Config.end_eff_ids
+        self.joint_names = Config.joint_names
         self.nb_ee = len(self.end_effector_names)
 
         # Creates the wrapper by calling the super.__init__.
