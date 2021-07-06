@@ -11,6 +11,7 @@ All rights reserved.
 """
 
 import time
+from robot_properties_nyu_finger.config import NYUFingerDoubleConfig0, NYUFingerDoubleConfig1
 from robot_properties_nyu_finger.wrapper import NYUFingerRobot
 from bullet_utils.env import BulletEnv
 import numpy as np
@@ -21,8 +22,10 @@ if __name__ == "__main__":
     env = BulletEnv()
 
     # Create a robot instance. This adds the robot to the simulator as well.
-    finger0 = NYUFingerRobot(finger_index=0)
-    finger1 = NYUFingerRobot(finger_index=1)
+    config0 = NYUFingerDoubleConfig0()
+    config1 = NYUFingerDoubleConfig1()
+    finger0 = NYUFingerRobot(config=config0)
+    finger1 = NYUFingerRobot(config=config1)
 
     # Add the robot to the env to update the internal structure of the robot
     # at every simulation steps.

@@ -128,9 +128,9 @@ class NYUFingerConfig(NYUFingerAbstract):
     v0 = zero(robot_model.nv)
     a0 = zero(robot_model.nv)
 
-class NYUFingerConfig0(NYUFingerConfig):
+class NYUFingerDoubleConfig0(NYUFingerConfig):
     robot_family = "nyu_finger"
-    robot_name = "nyu_finger0"
+    robot_name = "nyu_finger_double0"
 
     paths = find_paths(robot_name)
     meshes_path = paths["resources"]
@@ -191,7 +191,7 @@ class NYUFingerConfig0(NYUFingerConfig):
     v0 = zero(robot_model.nv)
     a0 = zero(robot_model.nv)
 
-class NYUFingerConfig1(NYUFingerConfig):
+class NYUFingerDoubleConfig1(NYUFingerConfig):
     robot_family = "nyu_finger"
     robot_name = "nyu_finger1"
 
