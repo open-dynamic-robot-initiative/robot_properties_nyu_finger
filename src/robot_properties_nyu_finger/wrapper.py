@@ -20,7 +20,8 @@ class NYUFingerRobot(PinBulletWrapper):
         self,
         pos=None,
         orn=None,
-        useFixedBase=True
+        useFixedBase=True,
+        config=None
     ):
 
         # Load the robot
@@ -29,8 +30,11 @@ class NYUFingerRobot(PinBulletWrapper):
         if orn is None:
             orn = pybullet.getQuaternionFromEuler([0, 0, 0])
 
-        pybullet.setAdditionalSearchPath(NYUFingerConfig.meshes_path)
-        self.urdf_path = NYUFingerConfig.urdf_path
+        if config is None:
+            config = NYUFingerConfig()
+
+        pybullet.setAdditionalSearchPath(config.meshes_path)
+        self.urdf_path = config.urdf_path
         self.robotId = pybullet.loadURDF(
             self.urdf_path,
             pos,
@@ -40,7 +44,7 @@ class NYUFingerRobot(PinBulletWrapper):
         )
 
         # Create the robot wrapper in pinocchio.
-        self.pin_robot = NYUFingerConfig.buildRobotWrapper()
+        self.pin_robot = config.buildRobotWrapper()
 
         # Query all the joints.
         num_joints = pybullet.getNumJoints(self.robotId)
@@ -55,9 +59,9 @@ class NYUFingerRobot(PinBulletWrapper):
                 lateralFriction=0.5,
             )
 
-        self.end_effector_names = NYUFingerConfig.end_effector_names
-        self.end_eff_ids = NYUFingerConfig.end_eff_ids
-        self.joint_names = NYUFingerConfig.joint_names
+        self.end_effector_names = config.end_effector_names
+        self.end_eff_ids = config.end_eff_ids
+        self.joint_names = config.joint_names
         self.nb_ee = len(self.end_effector_names)
 
         # Creates the wrapper by calling the super.__init__.
