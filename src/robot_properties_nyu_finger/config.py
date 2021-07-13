@@ -138,6 +138,11 @@ class NYUFingerDoubleConfig0(NYUFingerConfig):
     dgm_yaml_path = paths["dgm_yaml"]
     urdf_path = paths["urdf"]
 
+    # The inertia of a single blmc_motor.
+    motor_inertia = 0.0000045
+
+    # The motor gear ratio.
+    motor_gear_ration = 9.0
 
     # pinocchio model.
     pin_robot = RobotWrapper.BuildFromURDF(
@@ -188,13 +193,19 @@ class NYUFingerDoubleConfig0(NYUFingerConfig):
 
 class NYUFingerDoubleConfig1(NYUFingerConfig):
     robot_family = "nyu_finger"
-    robot_name = "nyu_finger1"
+    robot_name = "nyu_finger_double1"
 
     paths = find_paths(robot_name)
     meshes_path = paths["resources"]
     dgm_yaml_dir = paths["dgm_yaml_dir"]
     dgm_yaml_path = paths["dgm_yaml"]
     urdf_path = paths["urdf"]
+
+    # The inertia of a single blmc_motor.
+    motor_inertia = 0.0000045
+
+    # The motor gear ratio.
+    motor_gear_ration = 9.0
 
     # pinocchio model.
     pin_robot = RobotWrapper.BuildFromURDF(
