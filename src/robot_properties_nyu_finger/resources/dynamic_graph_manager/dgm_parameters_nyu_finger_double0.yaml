@@ -55,9 +55,9 @@ hardware_communication:
   calibration:
     # 'finger0_HAA', 'finger0_HFE', 'finger0_KFE'
     index_to_zero_angle: [
-       0.32318221, 0.2643204, 0.14950995
+      0.38185382, 0.21682639, 0.14954478
     ]
-  network_id: "enp26s0f1"
+  network_id: "eth4"
   shared_memory_name: "shm_nyu_finger_double_0"
   ros_node_name: "nyu_finger_double_0"
   motor_numbers: [3., 0., 1.]
