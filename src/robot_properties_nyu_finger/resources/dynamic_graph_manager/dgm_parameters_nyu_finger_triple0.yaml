@@ -1,0 +1,64 @@
+#
+# @author Julian Viereck (jviereck@nyu.edu)
+# @license License BSD-3-Clause
+# @copyright Copyright (c) 2021, New York University and Max Planck Gesellschaft.
+# @date 2021-06-22
+#
+# @brief Define the interface between the control and the hardware
+#
+
+device:
+  name: "nyu_finger_triple_0"
+  sensors:
+    # joints data
+    joint_positions:
+      size: 3
+    joint_velocities:
+      size: 3
+    joint_torques:
+      size: 3
+    joint_target_torques:
+      size: 3
+    joint_encoder_index:
+      size: 3
+
+    # robot status
+    motor_enabled:
+      size: 3
+    motor_ready:
+      size: 3
+    motor_board_enabled:
+      size: 2
+    motor_board_errors:
+      size: 2
+
+  controls:
+    ctrl_joint_torques:
+      size: 3
+    ctrl_joint_positions:
+      size: 3
+    ctrl_joint_velocities:
+      size: 3
+    ctrl_joint_position_gains:
+      size: 3
+    ctrl_joint_velocity_gains:
+      size: 3
+    ctrl_heart_beat:
+      size: 1
+
+hardware_communication:
+  max_missed_control: 10
+  control_period: 1000000 # in nano second this means 1ms <=> 1kz
+  maximum_time_for_user_cmd: 100000
+  # Angle between the next index and the home position(joint_positions=12*[0.,])
+  # NOTE: FR_HAA and HR_HAA are rotating in the other direction.
+  calibration:
+    # 'finger0_HAA', 'finger0_HFE', 'finger0_KFE'
+    index_to_zero_angle: [
+      0.38185382, 0.21682639, 0.14954478
+    ]
+  network_id: "eth4"
+  shared_memory_name: "shm_nyu_finger_triple_0"
+  ros_node_name: "nyu_finger_triple_0"
+  motor_numbers: [3., 0., 1.]
+  cpu_id: 0
