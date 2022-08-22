@@ -55,10 +55,10 @@ hardware_communication:
   calibration:
     # 'finger1_HAA', 'finger1_HFE', 'finger1_KFE',
     index_to_zero_angle: [
-       0.35829714, 0.6013653, 0.41536464
+       0.052, 0.437, 0.217
     ]
-  network_id: "eth3"
+  network_id: "ens4f1"
   shared_memory_name: "shm_nyu_finger_triple_2"
   ros_node_name: "nyu_finger_triple_2"
-  motor_numbers: [2, 0, 1]
+  motor_numbers: [0, 1, 2]
   cpu_id: 2
