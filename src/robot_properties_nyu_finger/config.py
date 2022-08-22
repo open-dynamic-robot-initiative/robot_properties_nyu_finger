@@ -323,3 +323,195 @@ class NYUFingerDoubleConfig(NYUFingerAbstract):
     q0[:] = initial_configuration
     v0 = zero(robot_model.nv)
     a0 = zero(robot_model.nv)
+
+
+class NYUFingerTripleConfig0(NYUFingerConfig):
+    robot_family = "nyu_finger"
+    robot_name = "nyu_finger_triple0"
+
+    paths = find_paths(robot_name)
+    meshes_path = paths["resources"]
+    dgm_yaml_dir = paths["dgm_yaml_dir"]
+    dgm_yaml_path = paths["dgm_yaml"]
+    urdf_path = paths["urdf"]
+
+    # The inertia of a single blmc_motor.
+    motor_inertia = 0.0000045
+
+    # The motor gear ratio.
+    motor_gear_ration = 9.0
+
+    # pinocchio model.
+    pin_robot = RobotWrapper.BuildFromURDF(
+        urdf_path, meshes_path
+    )
+    pin_robot.model.rotorInertia[6:] = motor_inertia
+    pin_robot.model.rotorGearRatio[6:] = motor_gear_ration
+
+    robot_model = pin_robot.model
+    mass = np.sum([i.mass for i in robot_model.inertias])
+
+    # End effectors informations
+    end_effector_names = ['finger0_lower_to_tip_joint']
+    end_eff_ids = [robot_model.getFrameId('finger0_lower_to_tip_joint')]
+    nb_ee = len(end_effector_names)
+
+    # The number of motors, here they are the same as there are only revolute
+    # joints.
+    nb_joints = robot_model.nv
+
+    joint_names = ["finger0_base_to_upper_joint", 
+                   "finger0_upper_to_middle_joint", 
+                   "finger0_middle_to_lower_joint"]
+
+    # Mapping between the ctrl vector in the device and the urdf indexes.
+    urdf_to_dgm = tuple(range(3))
+
+    map_joint_name_to_id = {}
+    map_joint_limits = {}
+    for i, (name, lb, ub) in enumerate(
+        zip(
+            robot_model.names[1:],
+            robot_model.lowerPositionLimit,
+            robot_model.upperPositionLimit,
+        )
+    ):
+        map_joint_name_to_id[name] = i
+        map_joint_limits[i] = [float(lb), float(ub)]
+
+    # Define the initial state.
+    initial_configuration = [0., 0., 0.]
+    initial_velocity = [0., 0., 0.]
+
+    q0 = zero(robot_model.nq)
+    q0[:] = initial_configuration
+    v0 = zero(robot_model.nv)
+    a0 = zero(robot_model.nv)
+
+
+
+class NYUFingerTripleConfig1(NYUFingerConfig):
+    robot_family = "nyu_finger"
+    robot_name = "nyu_finger_triple1"
+
+    paths = find_paths(robot_name)
+    meshes_path = paths["resources"]
+    dgm_yaml_dir = paths["dgm_yaml_dir"]
+    dgm_yaml_path = paths["dgm_yaml"]
+    urdf_path = paths["urdf"]
+
+    # The inertia of a single blmc_motor.
+    motor_inertia = 0.0000045
+
+    # The motor gear ratio.
+    motor_gear_ration = 9.0
+
+    # pinocchio model.
+    pin_robot = RobotWrapper.BuildFromURDF(
+        urdf_path, meshes_path
+    )
+    pin_robot.model.rotorInertia[6:] = motor_inertia
+    pin_robot.model.rotorGearRatio[6:] = motor_gear_ration
+
+    robot_model = pin_robot.model
+    mass = np.sum([i.mass for i in robot_model.inertias])
+
+    # End effectors informations
+    end_effector_names = ['finger1_lower_to_tip_joint']
+    end_eff_ids = [robot_model.getFrameId('finger1_lower_to_tip_joint')]
+    nb_ee = len(end_effector_names)
+
+    # The number of motors, here they are the same as there are only revolute
+    # joints.
+    nb_joints = robot_model.nv
+
+    joint_names = ["finger1_base_to_upper_joint", 
+                   "finger1_upper_to_middle_joint", 
+                   "finger1_middle_to_lower_joint"]
+
+    # Mapping between the ctrl vector in the device and the urdf indexes.
+    urdf_to_dgm = tuple(range(3))
+
+    map_joint_name_to_id = {}
+    map_joint_limits = {}
+    for i, (name, lb, ub) in enumerate(
+        zip(
+            robot_model.names[1:],
+            robot_model.lowerPositionLimit,
+            robot_model.upperPositionLimit,
+        )
+    ):
+        map_joint_name_to_id[name] = i
+        map_joint_limits[i] = [float(lb), float(ub)]
+
+    # Define the initial state.
+    initial_configuration = [0., 0., 0.]
+    initial_velocity = [0., 0., 0.]
+
+    q0 = zero(robot_model.nq)
+    q0[:] = initial_configuration
+    v0 = zero(robot_model.nv)
+    a0 = zero(robot_model.nv)
+
+class NYUFingerTripleConfig2(NYUFingerConfig):
+    robot_family = "nyu_finger"
+    robot_name = "nyu_finger_triple2"
+
+    paths = find_paths(robot_name)
+    meshes_path = paths["resources"]
+    dgm_yaml_dir = paths["dgm_yaml_dir"]
+    dgm_yaml_path = paths["dgm_yaml"]
+    urdf_path = paths["urdf"]
+
+    # The inertia of a single blmc_motor.
+    motor_inertia = 0.0000045
+
+    # The motor gear ratio.
+    motor_gear_ration = 9.0
+
+    # pinocchio model.
+    pin_robot = RobotWrapper.BuildFromURDF(
+        urdf_path, meshes_path
+    )
+    pin_robot.model.rotorInertia[6:] = motor_inertia
+    pin_robot.model.rotorGearRatio[6:] = motor_gear_ration
+
+    robot_model = pin_robot.model
+    mass = np.sum([i.mass for i in robot_model.inertias])
+
+    # End effectors informations
+    end_effector_names = ['finger2_lower_to_tip_joint']
+    end_eff_ids = [robot_model.getFrameId('finger2_lower_to_tip_joint')]
+    nb_ee = len(end_effector_names)
+
+    # The number of motors, here they are the same as there are only revolute
+    # joints.
+    nb_joints = robot_model.nv
+
+    joint_names = ["finger2_base_to_upper_joint", 
+                   "finger2_upper_to_middle_joint", 
+                   "finger2_middle_to_lower_joint"]
+
+    # Mapping between the ctrl vector in the device and the urdf indexes.
+    urdf_to_dgm = tuple(range(3))
+
+    map_joint_name_to_id = {}
+    map_joint_limits = {}
+    for i, (name, lb, ub) in enumerate(
+        zip(
+            robot_model.names[1:],
+            robot_model.lowerPositionLimit,
+            robot_model.upperPositionLimit,
+        )
+    ):
+        map_joint_name_to_id[name] = i
+        map_joint_limits[i] = [float(lb), float(ub)]
+
+    # Define the initial state.
+    initial_configuration = [0., 0., 0.]
+    initial_velocity = [0., 0., 0.]
+
+    q0 = zero(robot_model.nq)
+    q0[:] = initial_configuration
+    v0 = zero(robot_model.nv)
+    a0 = zero(robot_model.nv)

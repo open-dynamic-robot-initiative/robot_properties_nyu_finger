@@ -32,7 +32,6 @@ class NYUFingerRobot(PinBulletWrapper):
 
         if config is None:
             config = NYUFingerConfig()
-
         pybullet.setAdditionalSearchPath(config.meshes_path)
         self.urdf_path = config.urdf_path
         self.robotId = pybullet.loadURDF(
